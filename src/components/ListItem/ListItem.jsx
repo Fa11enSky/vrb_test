@@ -4,19 +4,31 @@ import { IoHeart } from "react-icons/io5";
 import { CiStar } from "react-icons/ci";
 import { MdDateRange } from "react-icons/md";
 import { FaPen, FaRegTrashAlt } from "react-icons/fa";
+import removeFromFovorites from "../../helpers/removeFromFavorites";
+import { useFavoritesContext } from "../FavoritesContext/FavoritesContext";
 
 const ListItem = ({ item }) => {
   const { title, image, release_date, rating } = item;
+  const { toggleFavorites } = useFavoritesContext();
+
+  const handleFav = () => {
+    toggleFavorites(item);
+  };
+
+  const hahdleDelFromFav = () => {
+    removeFromFovorites(title);
+  };
+
   return (
     <li className={css.movieItem}>
       <ul className={css.optList}>
         <li>
-          <button className={css.optBtn}>
+          <button onClick={handleFav} className={css.optBtn}>
             <IoHeart className={css.optIcon} />
           </button>
         </li>
         <li>
-          <button className={css.optBtn}>
+          <button onClick={hahdleDelFromFav} className={css.optBtn}>
             <FaRegTrashAlt className={css.optIcon} />
           </button>
         </li>
