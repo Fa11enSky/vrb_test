@@ -1,0 +1,16 @@
+.header{
+    margin-bottom: 15px;
+}
+.navList{
+    display: flex;
+    justify-content: center;    
+    gap: 25px;
+}
+.navList>li{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.navLink.active{
+    color:red;
+}
