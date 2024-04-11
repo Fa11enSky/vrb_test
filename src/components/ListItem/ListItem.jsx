@@ -4,23 +4,29 @@ import { IoHeart } from "react-icons/io5";
 import { CiStar } from "react-icons/ci";
 import { MdDateRange } from "react-icons/md";
 import { FaPen, FaRegTrashAlt } from "react-icons/fa";
-import removeFromFovorites from "../../helpers/removeFromFavorites";
 import { useFavoritesContext } from "../FavoritesContext/FavoritesContext";
+import { useNavigate } from "react-router-dom";
 
 const ListItem = ({ item }) => {
-  const { title, image, release_date, rating } = item;
+  const { id, title, image, release_date, rating } = item;
   const { toggleFavorites } = useFavoritesContext();
+  const navigate = useNavigate();
 
   const handleFav = () => {
     toggleFavorites(item);
   };
 
-  const hahdleDelFromFav = () => {
-    removeFromFovorites(title);
+  const handleNavigate = (ev) => {
+    const { target } = ev;
+
+    if (target.nodeName === "BUTTON") {
+      return;
+    }
+    navigate(`/details/${id}`);
   };
 
   return (
-    <li className={css.movieItem}>
+    <li onClick={handleNavigate} className={css.movieItem}>
       <ul className={css.optList}>
         <li>
           <button onClick={handleFav} className={css.optBtn}>
@@ -28,7 +34,7 @@ const ListItem = ({ item }) => {
           </button>
         </li>
         <li>
-          <button onClick={hahdleDelFromFav} className={css.optBtn}>
+          <button className={css.optBtn}>
             <FaRegTrashAlt className={css.optIcon} />
           </button>
         </li>
