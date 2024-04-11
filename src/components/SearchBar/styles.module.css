@@ -1,0 +1,12 @@
+.inputWrapper{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 25px   ;
+}
+.inputWrapper >input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+}
