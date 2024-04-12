@@ -3,7 +3,8 @@ import deleteMovie from "../../services/deleteMovie";
 
 const MovieContext = createContext();
 
-export const FavoritesProvider = ({ children }) => {
+export const MoviesProvider = ({ children }) => {
+  const [movies, setMovies] = useState([])
   const [favorites, setFavorites] = useState(
     JSON.parse(window.localStorage.getItem("favorites")) || []
   );
@@ -11,7 +12,8 @@ export const FavoritesProvider = ({ children }) => {
   const permanentDelete = (id) => {
     deleteMovie(id).then((data) => {
       const updatedFavorites = favorites.filter((el) => el._id !== data._id);
-
+      const updatedMovies = movies.filter((el) => el._id !== data._id);
+      setMovies(updatedMovies)
       window.localStorage.setItem(
         "favorites",
         JSON.stringify(updatedFavorites)
@@ -47,11 +49,11 @@ export const FavoritesProvider = ({ children }) => {
 
   return (
     <MovieContext.Provider
-      value={{ favorites, toggleFavorites, permanentDelete }}
+      value={{movies,setMovies, favorites, toggleFavorites, permanentDelete }}
     >
       {children}
     </MovieContext.Provider>
   );
 };
 
-export const useFavoritesContext = () => useContext(MovieContext);
+export const useMoviesContext = () => useContext(MovieContext);

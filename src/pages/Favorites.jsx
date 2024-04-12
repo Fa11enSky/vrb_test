@@ -1,8 +1,8 @@
 import MoviesList from "../components/MoviesList/MoviesList";
-import { useFavoritesContext } from "../components/FavoritesContext/FavoritesContext";
+import { useMoviesContext } from "../components/MoviesContext/MoviesContext";
 
 const Favorites = () => {
-  const { favorites, permanentDelete } = useFavoritesContext();
+  const { favorites, permanentDelete } = useMoviesContext();
   return (
     <section>
       {favorites.length > 0 ? (
