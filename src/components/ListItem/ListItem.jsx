@@ -8,6 +8,7 @@ import { useMoviesContext } from "../MoviesContext/MoviesContext";
 import { useNavigate } from "react-router-dom";
 import ModalUpdate from "../ModalUpdate/ModalUpdate";
 import ModalPortal from "../ModalPortal/ModalPortal";
+import Backdrop from "../Backdrop/Backdrop";
 
 const ListItem = ({ item }) => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -18,7 +19,7 @@ const ListItem = ({ item }) => {
   const handleFav = () => {
     toggleFavorites(item);
   };
-  
+
   const toggleEditModal = () => {
     setIsEditModalOpen(!isEditModalOpen);
   };
@@ -33,47 +34,52 @@ const ListItem = ({ item }) => {
   };
 
   return (
-    <li onClick={handleNavigate} className={css.movieItem}>
-      <ul className={css.optList}>
-        <li>
-          <button onClick={handleFav} className={css.optBtn}>
-            <IoHeart className={css.optIcon} />
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              permanentDelete(_id);
-            }}
-            className={css.optBtn}
-          >
-            <FaRegTrashAlt className={css.optIcon} />
-          </button>
-        </li>
-        <li>
-          <button onClick={toggleEditModal} className={css.optBtn}>
-            <FaPen className={css.optIcon} />
-          </button>
-        </li>
-      </ul>
-      <h2 className={css.title}>{title}</h2>
-      <div className={css.thumb}>
-        <img src={image} alt={`${title} poster`} />
-      </div>
-      <span className={css.date}>
-        <MdDateRange />
-        <span>{release_date}</span>
-      </span>
-      <span className={css.rating}>
-        <CiStar />
-        <span>{rating}</span>
-      </span>
+  <>
+      <li onClick={handleNavigate} className={css.movieItem}>
+        <ul className={css.optList}>
+          <li>
+            <button onClick={handleFav} className={css.optBtn}>
+              <IoHeart className={css.optIcon} />
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => {
+                permanentDelete(_id);
+              }}
+              className={css.optBtn}
+            >
+              <FaRegTrashAlt className={css.optIcon} />
+            </button>
+          </li>
+          <li>
+            <button onClick={toggleEditModal} className={css.optBtn}>
+              <FaPen className={css.optIcon} />
+            </button>
+          </li>
+        </ul>
+        <h2 className={css.title}>{title}</h2>
+        <div className={css.thumb}>
+          <img src={image} alt={`${title} poster`} />
+        </div>
+        <span className={css.date}>
+          <MdDateRange />
+          <span>{release_date}</span>
+        </span>
+        <span className={css.rating}>
+          <CiStar />
+          <span>{rating}</span>
+        </span>
+        
+      </li>
       {isEditModalOpen && (
-        <ModalPortal>
-          <ModalUpdate movie={item} />
-        </ModalPortal>
-      )}
-    </li>
+          <ModalPortal>
+            <Backdrop close={toggleEditModal}>
+              <ModalUpdate movie={item} />
+            </Backdrop>
+          </ModalPortal>
+        )}
+  </>
   );
 };
 
