@@ -34,7 +34,7 @@ const ListItem = ({ item }) => {
   };
 
   return (
-  <>
+    <>
       <li onClick={handleNavigate} className={css.movieItem}>
         <ul className={css.optList}>
           <li>
@@ -58,10 +58,10 @@ const ListItem = ({ item }) => {
             </button>
           </li>
         </ul>
-        <h2 className={css.title}>{title}</h2>
         <div className={css.thumb}>
           <img src={image} alt={`${title} poster`} />
         </div>
+        <h2 className={css.title}>{title}</h2>
         <span className={css.date}>
           <MdDateRange />
           <span>{release_date}</span>
@@ -70,16 +70,15 @@ const ListItem = ({ item }) => {
           <CiStar />
           <span>{rating}</span>
         </span>
-        
       </li>
       {isEditModalOpen && (
-          <ModalPortal>
-            <Backdrop close={toggleEditModal}>
-              <ModalUpdate movie={item} />
-            </Backdrop>
-          </ModalPortal>
-        )}
-  </>
+        <ModalPortal>
+          <Backdrop close={toggleEditModal}>
+            <ModalUpdate movie={item} />
+          </Backdrop>
+        </ModalPortal>
+      )}
+    </>
   );
 };
 
