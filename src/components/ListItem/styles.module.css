@@ -2,7 +2,7 @@
     cursor: pointer;
   padding: 15px 15px 15px 15px;
   border: 3px solid #000;
-  border-radius: 5%;
+  border-radius: 20px;
   width: 320px;
   transition: box-shadow 250ms linear;
 }
