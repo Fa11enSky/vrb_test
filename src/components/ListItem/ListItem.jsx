@@ -16,7 +16,7 @@ const ListItem = ({ item }) => {
   const { toggleFavorites, permanentDelete, favorites } = useMoviesContext();
   const navigate = useNavigate();
   const favoritesIds = favorites.map((el) => el._id);
-  
+
   const handleFav = () => {
     toggleFavorites(item);
   };
@@ -63,7 +63,13 @@ const ListItem = ({ item }) => {
           </li>
         </ul>
         <div className={css.thumb}>
-          <img src={image} alt={`${title} poster`} />
+          <img
+            src={
+              image ||
+              "https://t3.ftcdn.net/jpg/04/60/01/36/360_F_460013622_6xF8uN6ubMvLx0tAJECBHfKPoNOR5cRa.jpg"
+            }
+            alt={`${title} poster`}
+          />
         </div>
         <h2 className={css.title}>{title}</h2>
         <span className={css.date}>
