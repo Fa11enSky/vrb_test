@@ -13,9 +13,10 @@ import Backdrop from "../Backdrop/Backdrop";
 const ListItem = ({ item }) => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const { _id, title, image, release_date, rating } = item;
-  const { toggleFavorites, permanentDelete } = useMoviesContext();
+  const { toggleFavorites, permanentDelete, favorites } = useMoviesContext();
   const navigate = useNavigate();
-
+  const favoritesIds = favorites.map((el) => el._id);
+  
   const handleFav = () => {
     toggleFavorites(item);
   };
@@ -32,6 +33,7 @@ const ListItem = ({ item }) => {
     }
     navigate(`/details/${_id}`);
   };
+  const isFavorite = favoritesIds.includes(_id);
 
   return (
     <>
@@ -39,7 +41,9 @@ const ListItem = ({ item }) => {
         <ul className={css.optList}>
           <li>
             <button onClick={handleFav} className={css.optBtn}>
-              <IoHeart className={css.optIcon} />
+              <IoHeart
+                className={`${css.optIcon} ${isFavorite ? css.favorite : ""}`}
+              />
             </button>
           </li>
           <li>
