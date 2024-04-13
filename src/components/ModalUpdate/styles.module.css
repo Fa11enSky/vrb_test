@@ -1,0 +1,55 @@
+.formEdit {
+  overflow-y: auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 320px;
+  max-width: 620px;
+  background-color: #fff;
+  padding: 25px 15px;
+  border-radius: 20px;
+}
+.formTitle {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.formEdit label {
+  display: flex;
+  flex-direction: column;
+}
+.imageLabel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  align-items: center;
+}
+.imageLabel:hover .plus {
+  fill: green;
+}
+.plus {
+  width: 35px;
+  height: 35px;
+}
+.imageInput {
+  display: none;
+}
+.formEdit input {
+  font-size: 18px;
+  font-family: inherit;
+  border-radius: 20px;
+  padding: 10px;
+}
+.formEdit textarea {
+  overflow: auto;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 10px;
+  height: 100px;
+  resize: none;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.formEdit textarea::-webkit-scrollbar {
+  width: 0;
+}
