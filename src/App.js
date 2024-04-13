@@ -1,11 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Movies from "./pages/Movies";
-import Favorites from "./pages/Favorites";
+import { lazy } from "react";
 import Layout from "./components/Layout/Layout";
 import { MoviesProvider } from "./components/MoviesContext/MoviesContext";
-import DetailsPage from "./pages/DetailsPage";
 
+const Movies = lazy(() => import("./pages/Movies"));
+const Favorites = lazy(() => import("./pages/Favorites"));
+const DetailsPage = lazy(() => import("./pages/DetailsPage"));
 function App() {
   return (
     <div className="container">
