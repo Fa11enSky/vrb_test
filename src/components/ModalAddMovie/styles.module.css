@@ -1,0 +1,67 @@
+.formAdd {
+  overflow-y: auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 320px;
+  max-width: 620px;
+  background-color: #fff;
+  padding: 25px 15px;
+  border-radius: 20px;
+}
+.formTitle {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.formAdd label {
+  display: flex;
+  flex-direction: column;
+}
+.imageLabel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  align-items: center;
+}
+.imageLabel:hover .plus {
+  fill: green;
+}
+.plus {
+  width: 35px;
+  height: 35px;
+}
+.imageInput {
+  display: none;
+}
+.formAdd input {
+  font-size: 18px;
+  font-family: inherit;
+  border-radius: 20px;
+  padding: 10px;
+}
+.formAdd textarea {
+  overflow: auto;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 10px;
+  height: 100px;
+  resize: none;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.formAdd textarea::-webkit-scrollbar {
+  width: 0;
+}
+.smbBtn {
+  border: none;
+  font-size: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  border-radius: 25px;
+  padding: 15px;
+  color: #fff;
+}
