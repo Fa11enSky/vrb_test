@@ -60,7 +60,7 @@ const ModalAddMovie = ({ close }) => {
       !rating ||
       !description
     ) {
-      console.log(Boolean(description));
+      Notify.failure('All fields is required')
       return;
     }
     const movieObj = {
@@ -109,7 +109,7 @@ const ModalAddMovie = ({ close }) => {
         />
       </label>
       <label>
-        title
+        Title
         <input
           onChange={handleInput}
           type="text"
@@ -119,7 +119,7 @@ const ModalAddMovie = ({ close }) => {
         />
       </label>
       <label>
-        rating (1.0...10)
+        Rating (1.0...10)
         <input
           onChange={handleInput}
           type="string"
@@ -130,7 +130,7 @@ const ModalAddMovie = ({ close }) => {
         />
       </label>
       <label>
-        director
+        Director
         <input
           onChange={handleInput}
           type="text"
@@ -140,7 +140,7 @@ const ModalAddMovie = ({ close }) => {
         />
       </label>
       <label>
-        actors{" "}
+        Actors{" "}
         <input
           onChange={handleInput}
           type="text"
@@ -150,7 +150,7 @@ const ModalAddMovie = ({ close }) => {
         />
       </label>
       <label>
-        date (YYYY-MM-DD)
+        Release date (YYYY-MM-DD)
         <input
           onChange={handleInput}
           type="text"
@@ -161,7 +161,7 @@ const ModalAddMovie = ({ close }) => {
         />
       </label>
       <label>
-        description
+        Description
         <textarea
           onChange={handleInput}
           type="text"
@@ -170,7 +170,9 @@ const ModalAddMovie = ({ close }) => {
           value={description}
         />
       </label>
-      <button className={css.smbBtn} type="submit">Add</button>
+      <button className={css.smbBtn} type="submit">
+        Add
+      </button>
     </form>
   );
 };

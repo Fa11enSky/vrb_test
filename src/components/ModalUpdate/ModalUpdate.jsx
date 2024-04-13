@@ -102,7 +102,7 @@ const ModalUpdate = ({ movie, close }) => {
         />
       </label>
       <label>
-        title
+        Title
         <input
           onChange={handleInput}
           type="text"
@@ -112,7 +112,7 @@ const ModalUpdate = ({ movie, close }) => {
         />
       </label>
       <label>
-        rating (1.0...10)
+        Rating (1.0...10)
         <input
           onChange={handleInput}
           type="string"
@@ -123,7 +123,7 @@ const ModalUpdate = ({ movie, close }) => {
         />
       </label>
       <label>
-        director
+        Director
         <input
           onChange={handleInput}
           type="text"
@@ -133,7 +133,7 @@ const ModalUpdate = ({ movie, close }) => {
         />
       </label>
       <label>
-        actors{" "}
+        Actors{" "}
         <input
           onChange={handleInput}
           type="text"
@@ -143,7 +143,7 @@ const ModalUpdate = ({ movie, close }) => {
         />
       </label>
       <label>
-        date (YYYY-MM-DD)
+        Release date (YYYY-MM-DD)
         <input
           onChange={handleInput}
           type="text"
@@ -154,7 +154,7 @@ const ModalUpdate = ({ movie, close }) => {
         />
       </label>
       <label>
-        description
+        Description
         <textarea
           onChange={handleInput}
           type="text"
