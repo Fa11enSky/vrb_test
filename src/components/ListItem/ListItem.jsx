@@ -74,7 +74,7 @@ const ListItem = ({ item }) => {
       {isEditModalOpen && (
         <ModalPortal>
           <Backdrop close={toggleEditModal}>
-            <ModalUpdate movie={item} />
+            <ModalUpdate movie={item} close={toggleEditModal} />
           </Backdrop>
         </ModalPortal>
       )}
