@@ -1,31 +1,31 @@
 {
   "files": {
     "main.css": "/vrb_test/static/css/main.e5598ec3.css",
-    "main.js": "/vrb_test/static/js/main.79b34ccf.js",
+    "main.js": "/vrb_test/static/js/main.b173a1ee.js",
     "static/css/63.0b68891a.chunk.css": "/vrb_test/static/css/63.0b68891a.chunk.css",
     "static/js/63.af7c81e2.chunk.js": "/vrb_test/static/js/63.af7c81e2.chunk.js",
     "static/css/62.b8a251bb.chunk.css": "/vrb_test/static/css/62.b8a251bb.chunk.css",
     "static/js/62.51e96524.chunk.js": "/vrb_test/static/js/62.51e96524.chunk.js",
     "static/css/164.566802f2.chunk.css": "/vrb_test/static/css/164.566802f2.chunk.css",
-    "static/js/164.f6d993c1.chunk.js": "/vrb_test/static/js/164.f6d993c1.chunk.js",
+    "static/js/164.000fa66c.chunk.js": "/vrb_test/static/js/164.000fa66c.chunk.js",
     "static/js/453.8f318d20.chunk.js": "/vrb_test/static/js/453.8f318d20.chunk.js",
     "static/js/51.9783d3ac.chunk.js": "/vrb_test/static/js/51.9783d3ac.chunk.js",
     "static/js/271.525ab5a9.chunk.js": "/vrb_test/static/js/271.525ab5a9.chunk.js",
     "index.html": "/vrb_test/index.html",
     "main.e5598ec3.css.map": "/vrb_test/static/css/main.e5598ec3.css.map",
-    "main.79b34ccf.js.map": "/vrb_test/static/js/main.79b34ccf.js.map",
+    "main.b173a1ee.js.map": "/vrb_test/static/js/main.b173a1ee.js.map",
     "63.0b68891a.chunk.css.map": "/vrb_test/static/css/63.0b68891a.chunk.css.map",
     "63.af7c81e2.chunk.js.map": "/vrb_test/static/js/63.af7c81e2.chunk.js.map",
     "62.b8a251bb.chunk.css.map": "/vrb_test/static/css/62.b8a251bb.chunk.css.map",
     "62.51e96524.chunk.js.map": "/vrb_test/static/js/62.51e96524.chunk.js.map",
     "164.566802f2.chunk.css.map": "/vrb_test/static/css/164.566802f2.chunk.css.map",
-    "164.f6d993c1.chunk.js.map": "/vrb_test/static/js/164.f6d993c1.chunk.js.map",
+    "164.000fa66c.chunk.js.map": "/vrb_test/static/js/164.000fa66c.chunk.js.map",
     "453.8f318d20.chunk.js.map": "/vrb_test/static/js/453.8f318d20.chunk.js.map",
     "51.9783d3ac.chunk.js.map": "/vrb_test/static/js/51.9783d3ac.chunk.js.map",
     "271.525ab5a9.chunk.js.map": "/vrb_test/static/js/271.525ab5a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5598ec3.css",
-    "static/js/main.79b34ccf.js"
+    "static/js/main.b173a1ee.js"
   ]
 }
