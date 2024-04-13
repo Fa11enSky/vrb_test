@@ -1,5 +1,5 @@
 import MoviesList from "../components/MoviesList/MoviesList";
-import { useMoviesContext } from "../components/MoviesContext/MoviesContext";
+import { useMoviesContext } from "../providers/MoviesContext/MoviesContext";
 
 const Favorites = () => {
   const { favorites, permanentDelete } = useMoviesContext();

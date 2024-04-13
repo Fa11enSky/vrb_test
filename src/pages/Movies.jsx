@@ -3,7 +3,7 @@ import fetchAllMovies from "../services/fetchAllMovies";
 import MoviesList from "../components/MoviesList/MoviesList";
 import SearchBar from "../components/SearchBar/SearchBar";
 import filterByTitle from "../helpers/filterByTitle";
-import { useMoviesContext } from "../components/MoviesContext/MoviesContext";
+import { useMoviesContext } from "../providers/MoviesContext/MoviesContext";
 import AddBtn from "../components/AddBtn/AddBtn";
 import { Notify } from "notiflix";
 
@@ -15,12 +15,15 @@ const Movies = () => {
     fetchAllMovies()
       .then((data) => setMovies(data))
       .catch((e) => Notify.failure(e.message));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <section>
-     <div> <SearchBar setQuery={setQuery} /> <AddBtn/></div>
+      <div>
+        {" "}
+        <SearchBar setQuery={setQuery} /> <AddBtn />
+      </div>
       <MoviesList data={query ? filterByTitle(query, movies) : movies} />
     </section>
   );

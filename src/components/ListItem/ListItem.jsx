@@ -4,7 +4,7 @@ import { IoHeart } from "react-icons/io5";
 import { CiStar } from "react-icons/ci";
 import { MdDateRange } from "react-icons/md";
 import { FaPen, FaRegTrashAlt } from "react-icons/fa";
-import { useMoviesContext } from "../MoviesContext/MoviesContext";
+import { useMoviesContext } from "../../providers/MoviesContext/MoviesContext";
 import { useNavigate } from "react-router-dom";
 import ModalUpdate from "../ModalUpdate/ModalUpdate";
 import ModalPortal from "../ModalPortal/ModalPortal";

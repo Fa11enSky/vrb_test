@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
 import Layout from "./components/Layout/Layout";
-import { MoviesProvider } from "./components/MoviesContext/MoviesContext";
+import { MoviesProvider } from "./providers/MoviesContext/MoviesContext";
 
 const Movies = lazy(() => import("./pages/Movies"));
 const Favorites = lazy(() => import("./pages/Favorites"));

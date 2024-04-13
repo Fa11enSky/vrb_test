@@ -3,7 +3,7 @@ import css from "./styles.module.css";
 import { CiCirclePlus } from "react-icons/ci";
 import uploadImageToCloudinary from "../../services/uploadImage";
 import updateById from "../../services/updateById";
-import { useMoviesContext } from "../MoviesContext/MoviesContext";
+import { useMoviesContext } from "../../providers/MoviesContext/MoviesContext";
 import { Notify } from "notiflix";
 const ModalUpdate = ({ movie, close }) => {
   const [title, setTitle] = useState(movie.title);

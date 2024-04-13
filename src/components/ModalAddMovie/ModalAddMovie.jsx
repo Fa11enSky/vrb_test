@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import css from "./styles.module.css";
-import { useMoviesContext } from "../MoviesContext/MoviesContext";
+import { useMoviesContext } from "../../providers/MoviesContext/MoviesContext";
 import { CiCirclePlus } from "react-icons/ci";
 import uploadImageToCloudinary from "../../services/uploadImage";
 import postNewMovie from "../../services/postNewMovie";
@@ -60,7 +60,7 @@ const ModalAddMovie = ({ close }) => {
       !rating ||
       !description
     ) {
-      Notify.failure('All fields is required')
+      Notify.failure("All fields is required");
       return;
     }
     const movieObj = {
