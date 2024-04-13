@@ -34,7 +34,7 @@ const Backdrop = ({ children, close }) => {
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#00000065",
-        overflowY: "hidden",
+        overflowY: "auto",
         zIndex: 900,
       }}
     >
