@@ -7,7 +7,14 @@ const SingleMovieItem = ({ item }) => {
     <section>
       <aside className={css.about}>
         <div className={css.thumb}>
-          <img src={image} alt={`${title}_poster`} />
+          <img
+            src={
+              image ||
+              "https://t3.ftcdn.net/jpg/04/60/01/36/360_F_460013622_6xF8uN6ubMvLx0tAJECBHfKPoNOR5cRa.jpg"
+            }
+            alt={`${title}_poster`}
+            width={562}
+          />
         </div>
         <div className={css.infoWrapper}>
           <h1 className={css.title}>{title}</h1>
