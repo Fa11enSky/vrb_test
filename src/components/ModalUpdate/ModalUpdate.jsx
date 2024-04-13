@@ -163,7 +163,9 @@ const ModalUpdate = ({ movie, close }) => {
           value={description}
         />
       </label>
-      <button type="submit">Edit</button>
+      <button className={css.smbBtn} type="submit">
+        Edit
+      </button>
     </form>
   );
 };
